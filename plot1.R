@@ -15,9 +15,8 @@ date2 <- strptime("03/02/2007",  format = "%d/%m/%Y")
 # subset it
 sample <- subset(electric, Date >= date1 & Date <= date2)
 
-par(mfrow=c(1,1))
-
 # Plot 1
+par(mfrow=c(1,1))
 hist(sample$Global_active_power, main = "Global Active Power"
                                               , xlab = "Global Active Power (kilowatts)"    
                                               , col = "Red"

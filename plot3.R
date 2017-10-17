@@ -15,9 +15,8 @@ date2 <- strptime("03/02/2007",  format = "%d/%m/%Y")
 # subset it
 sample <- subset(electric, Date >= date1 & Date <= date2)
 
-par(mfrow=c(1,1))
-
 #Plot 3
+par(mfrow=c(1,1))
 plot (sample$Date,as.numeric(sample$Sub_metering_1), ylim = c(0,40), type="n", yaxt="n", xlab="", ylab = "Energy submetering")
 axis(2, at=seq(0, 30, 10), las=3)
 lines(sample$Date, as.numeric(as.character(sample$Sub_metering_1)), col = "Green")

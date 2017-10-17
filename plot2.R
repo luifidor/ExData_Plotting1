@@ -15,20 +15,8 @@ date2 <- strptime("03/02/2007",  format = "%d/%m/%Y")
 # subset it
 sample <- subset(electric, Date >= date1 & Date <= date2)
 
-par(mfrow=c(1,1))
-
-# Plot 1
-hist(sample$Global_active_power, main = "Global Active Power"
-                                              , xlab = "Global Active Power (kilowatts)"    
-                                              , col = "Red"
-                                                , breaks = 11 
-                                                , ylim = c(0,1200)                                         
-                                                , xlim = c(0,6)
-                                        , xaxt="n")
-axis(1, xaxp=c(0, 6, 3), las=1)
-
-
 #Plot 2
+par(mfrow=c(1,1))
 plot (sample$Date,sample$Global_active_power, ylim = c(0,8), type="n", yaxt="n", xlab="", ylab = "Global Active Power (kilowatts)")
 axis(2, at=seq(0, 6, 2), las=3)
 lines(sample$Date, sample$Global_active_power)
