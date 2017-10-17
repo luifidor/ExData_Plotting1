@@ -26,3 +26,6 @@ lines(sample$Date, as.numeric(sample$Sub_metering_3), col = "Blue")
 legend('topright', c("Sub_Metering_1", "Sub_Metering_2", "Sub_Metering_3") , 
        lty=1, col=c('green','red', 'blue'),cex=1)
 
+#copy to a file
+dev.copy(png, filename="//wbad.group/DFS_WB/10_Home/uwbbenoelf/DATA/Desktop/GIT Folder/course2/ExData_Plotting1/plot3.png", width=480, height=480)
+dev.off()

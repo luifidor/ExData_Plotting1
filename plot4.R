@@ -41,3 +41,8 @@ plot (sample$Date,sample$Global_reactive_power, type="n", ylab = "Global_reactiv
 points(sample$Date, sample$Global_reactive_power)
 segments(as.numeric(sample$Date), sample$Global_reactive_power, as.numeric(sample$Date), 0, cex = 0.5)
 axis(2, at=seq(0, 0.5, 0.1), las=3)
+
+
+#copy to a file
+dev.copy(png, filename="//wbad.group/DFS_WB/10_Home/uwbbenoelf/DATA/Desktop/GIT Folder/course2/ExData_Plotting1/plot4.png", width=480, height=480)
+dev.off()

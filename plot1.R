@@ -26,3 +26,7 @@ hist(sample$Global_active_power, main = "Global Active Power"
                                                 , xlim = c(0,6)
                                         , xaxt="n")
 axis(1, xaxp=c(0, 6, 3), las=1)
+
+#copy to a file
+dev.copy(png, filename="//wbad.group/DFS_WB/10_Home/uwbbenoelf/DATA/Desktop/GIT Folder/course2/ExData_Plotting1/plot1.png", width=480, height=480)
+dev.off()
